@@ -13,6 +13,5 @@ public class Name {
   private String name;
 
 
-  public Name(Integer id, String name) {
-  }
+
 }
