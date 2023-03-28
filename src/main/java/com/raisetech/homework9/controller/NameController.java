@@ -35,7 +35,7 @@ public class NameController {
   }
 
   @GetMapping("/{id}")
-  public NameResponse getNameById(@PathVariable("id") int id) throws Exception {
+  public NameResponse getUserById(@PathVariable("id") int id) throws Exception {
     return new NameResponse(nameService.findById(id));
   }
 
