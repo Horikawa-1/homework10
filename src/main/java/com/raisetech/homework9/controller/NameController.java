@@ -30,7 +30,7 @@ public class NameController {
   }
 
   @GetMapping
-  public List<NameResponse> getNames() {
+  public List<NameResponse> getUsers() {
     return nameService.findAll().stream().map(NameResponse::new).toList();
   }
 
@@ -44,11 +44,11 @@ public class NameController {
       UriComponentsBuilder builder) {
 
     // 登録処理
-    Name name = nameService.createName(form);
+    Name name = nameService.createUser(form);
     URI url = builder.path("/names/" + name.getId()) // id部分は実際に登録された際に発⾏したidを設定する
         .build().toUri();
 
-    return ResponseEntity.created(url).body(Map.of("message", "name successfully created"));
+    return ResponseEntity.created(url).body(Map.of("message", "user successfully created"));
   }
 
   @PatchMapping("/{id}")
@@ -58,14 +58,14 @@ public class NameController {
     //更新処理
     nameService.updateName(id, updateForm);
 
-    return ResponseEntity.ok(Map.of("message", "user successfully updated"));
+    return ResponseEntity.ok(Map.of("message", "name successfully updated"));
   }
 
   @DeleteMapping("/{id}")
   public ResponseEntity<Map<String, String>> deleteUser(@PathVariable("id") int id) {
 
     // 削除処理
-    nameService.deleteName(id);
+    nameService.deleteUser(id);
 
     return ResponseEntity.ok(Map.of("message", "user successfully deleted"));
   }
