@@ -40,7 +40,7 @@ public class NameController {
   }
 
   @PostMapping
-  public ResponseEntity<Map<String, String>> CreateName(@RequestBody @Validated CreateForm form,
+  public ResponseEntity<Map<String, String>> CreateUser(@RequestBody @Validated CreateForm form,
       UriComponentsBuilder builder) {
 
     // 登録処理
@@ -52,7 +52,7 @@ public class NameController {
   }
 
   @PatchMapping("/{id}")
-  public ResponseEntity<Map<String, String>> updateUser(@PathVariable("id") int id,
+  public ResponseEntity<Map<String, String>> updateName(@PathVariable("id") int id,
       @Validated @RequestBody UpdateForm updateForm) {
 
     //更新処理
