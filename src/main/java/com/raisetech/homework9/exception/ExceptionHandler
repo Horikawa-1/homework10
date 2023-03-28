@@ -15,6 +15,7 @@ import java.util.Map;
 @RestControllerAdvice
 public class ExceptionHandler extends ResponseEntityExceptionHandler {
 
+  //  該当するidが無い時の例外処理
   @org.springframework.web.bind.annotation.ExceptionHandler(value = ResourceNotFoundException.class)
   public ResponseEntity<Map<String, String>> handleNoNameFound(ResourceNotFoundException e,
       HttpServletRequest request) {
