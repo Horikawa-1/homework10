@@ -40,7 +40,7 @@ public class NameController {
   }
 
   @PostMapping
-  public ResponseEntity<Map<String, String>> CreateUser(@RequestBody @Validated CreateForm form,
+  public ResponseEntity<Map<String, String>> createUser(@RequestBody @Validated CreateForm form,
       UriComponentsBuilder builder) {
 
     // 登録処理
