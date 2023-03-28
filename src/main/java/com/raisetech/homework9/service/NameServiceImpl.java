@@ -30,9 +30,8 @@ public class NameServiceImpl implements NameService {
 
   @Override
   public Name createUser(CreateForm form) {
-    Name name = new Name(form.getId(), form.getName());
+  Name name = new Name(form.getId(), form.getName());
     nameMapper.insertName(name);
-
     return name;
   }
 
