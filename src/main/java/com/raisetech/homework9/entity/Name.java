@@ -8,9 +8,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Name {
-
   private int id;
   private String name;
-
-
 }
