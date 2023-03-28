@@ -1,11 +1,29 @@
-# 第10回の課題（CRUD処理と例外処理を実装する）
-
+# 第10回の課題（MyBatisでCRUD処理と例外処理の実装）
 ---
 
-データベースのレコードを取得するGETメソッドの内容については長くなるのでこちらのREADMEをご覧くださいhttps://github.com/Horikawa-1/homework9
+使うデータベースはname_managementコンテナのname_databaseデータベース内のnamesテーブルで、以下がテーブルの詳細で、ID1~ID5までのレコードがあります。
 
-データベースにレコードを追加するときは、POSTで「http://localhost:8080/names 」で、NameServiceImplクラスのcreateNameメソッドよりレコードを追加できます。
+![image](https://user-images.githubusercontent.com/111167638/224326770-2f30b21f-3b38-4e7b-8f82-d55173e92593.png)
 
-データベースのレコードを指定して更新する時は、PATCHで「http://localhost:8080/names/{指定のID} 」で、NameServiceImplクラスのupdateNameメソッドより指定のレコードを更新できます。
+* localhost:8080/namesでNameControllerクラスのgetUsersメソッドより、データベースの全レコードが表示されます。
 
-データベースのレコードを指定して削除する時は、DELETEで「http://localhost:8080/names/{指定のID} 」で、NameServiceImplクラスのdeleteNameメソッドより指定のレコードを削除できます。
+![スクリーンショット (213)](https://user-images.githubusercontent.com/111167638/224325106-2db72af1-7d64-49a5-a861-a1d964dac88b.png)
+
+* localhost:8080/names/{id}でgetNameByIdメソッドより、指定したIDのレコードがJSON形式で返されます。以下ID5の例です。
+
+![image](https://user-images.githubusercontent.com/111167638/224325592-961ffb8c-753e-478c-8f90-6b963ec09355.png)
+
+* getNameByIdメソッドで指定されたIDがテーブルになかった場合、例外処理で 「"message": "ID:{指定されたID} Not Found"」、ステータスコード404が返されます。以下、ID6の例です。
+
+![スクリーンショット (221)](https://user-images.githubusercontent.com/111167638/224542421-1b0b268d-48af-4a27-8abf-a8a8f96b7fe8.png)
+
+* 
+
+
+
+【環境】
+
+
+・IntelliJ IDEA Community Edition 2022.1.2
+
+・SDK:Amazon Corretto 17
