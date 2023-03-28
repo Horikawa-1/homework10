@@ -9,11 +9,11 @@
 
 ![スクリーンショット (213)](https://user-images.githubusercontent.com/111167638/224325106-2db72af1-7d64-49a5-a861-a1d964dac88b.png)
 
-* localhost:8080/names/{id}でgetNameByIdメソッドより、指定したIDのレコードがJSON形式で返されます。以下ID5の例です。
+* localhost:8080/names/{id}でgetUserByIdメソッドより、指定したIDのレコードがJSON形式で返されます。以下ID5の例です。
 
 ![image](https://user-images.githubusercontent.com/111167638/224325592-961ffb8c-753e-478c-8f90-6b963ec09355.png)
 
-* getNameByIdメソッドで指定されたIDがテーブルになかった場合、例外処理で 「"message": "ID:{指定されたID} Not Found"」、ステータスコード404が返されます。以下、ID6の例です。
+* getUserByIdメソッドで指定されたIDがテーブルになかった場合、例外処理で 「"message": "ID:{指定されたID} Not Found"」、ステータスコード404が返されます。以下、ID6の例です。
 
 ![スクリーンショット (221)](https://user-images.githubusercontent.com/111167638/224542421-1b0b268d-48af-4a27-8abf-a8a8f96b7fe8.png)
 
