@@ -11,7 +11,6 @@ import org.hibernate.validator.constraints.Length;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class UpdateForm {
 
 
