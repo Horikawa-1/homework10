@@ -25,7 +25,7 @@ docker compose down
 
 ---
 
-## URL設計
+# URL設計
 | No | 画面名／機能名     | メソッド名 | HTTPリクエストの種類 | URL          | 
 |-------------|-------------| ------------ |-----------------|-----------------| 
 | 1 | レコード一覧取得     | findAll() |GET|http://localhost:8080/users      |
@@ -35,7 +35,21 @@ docker compose down
 | 5 | レコードの削除 | deleteUser(int id) |DELETE| http://localhost:8080/users/{id} |
 
 ---
-![image](https://user-images.githubusercontent.com/111167638/224326770-2f30b21f-3b38-4e7b-8f82-d55173e92593.png)
+# スクリーンショットと例外処理
+
+<details>
+<summary><h4> 1. GET /users </h4></summary>
+
+![GET:/usersでレコード一覧を取得](https://user-images.githubusercontent.com/111167638/231456474-b2b32d2d-3c6b-45bb-8424-b14c1d136553.png)
+</details>
+
+
+<details>
+<summary><h4> 2-1. GET /todos/{id} </h4></summary>
+
+![GET:/todos{id}で特定のタスクを１件取得した時のJSON結果](https://user-images.githubusercontent.com/111167638/231457801-1d3dfaad-f847-49ce-ab35-2eca4d6d7c93.png)
+</details>
+
 
 * GETでlocalhost:8080/namesでNameControllerクラスのgetUsersメソッドより、データベースの全レコードが返されます。
 
