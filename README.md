@@ -16,13 +16,23 @@ docker compose down
 で停止  
 
 ---
-# データベース定義
+# DBテーブル
 
 |カラム名（論理名）|カラム名（物理名）|型・桁|Nullable|その他コメント|
 |---|---|---|---|---|
 |ID|id|int|NO|primary key, auto_increment|
 |名前|name|varchar(20)|NO|  
-|年齢|age|int|NO|
+
+---
+
+## URL設計
+| No | 画面名／機能名     | メソッド名 | HTTPリクエストの種類 | URL          | 
+|-------------|-------------| ------------ |-----------------|-----------------| 
+| 1 | レコード一覧取得     | findAll() |GET|http://localhost:8080/users      |
+| 2 | 指定したIDのレコードを取得 | findById(int id) |GET|  http://localhost:8080/users/{id}  |
+| 3 | レコードの新規登録 | createUser(CreateForm form) |POST| http://localhost:8080/users |
+| 4 | 指定したレコードのnameの更新 | updateName(int id, UpdateForm form) |PATCH| http://localhost:8080/users/{id} |
+| 5 | レコードの削除 | deleteUser(int id) |DELETE| http://localhost:8080/users/{id} |
 
 ---
 ![image](https://user-images.githubusercontent.com/111167638/224326770-2f30b21f-3b38-4e7b-8f82-d55173e92593.png)
