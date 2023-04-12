@@ -105,11 +105,3 @@ docker compose down
 ![スクリーンショット (256)](https://user-images.githubusercontent.com/111167638/228145312-31323526-4480-4d36-8df8-953d69f6f75a.png)
 
 ![スクリーンショット (257)](https://user-images.githubusercontent.com/111167638/228145325-72e07046-8b9d-4b3e-af47-2a8d2814f3df.png)
-
-
-【環境】
-
-
-・IntelliJ IDEA Community Edition 2022.1.2
-
-・
