@@ -1,8 +1,30 @@
-# 第10回の課題（MyBatisでCRUD処理と例外処理の実装）
+# APIの概要
+
+idとnameの情報によりユーザーを管理する機能を持ったAPIを作成しました。
+READ・CREATE・UPDATE・DELETE機能を実装しています。  
+単体テスト、結合テスト、Github ActionsでのCIも実装しています。
+
 ---
+# 起動手順
+```  
+docker compose up  
+```  
+で起動  
+```  
+docker compose down  
+``` 
+で停止  
 
-使うデータベースはname_managementコンテナのname_databaseデータベース内のnamesテーブルで、以下がテーブルの詳細で、ID1~ID5までのレコードがあります。
+---
+# データベース定義
 
+|カラム名（論理名）|カラム名（物理名）|型・桁|Nullable|その他コメント|
+|---|---|---|---|---|
+|ID|id|int|NO|primary key, auto_increment|
+|名前|name|varchar(20)|NO|  
+|年齢|age|int|NO|
+
+---
 ![image](https://user-images.githubusercontent.com/111167638/224326770-2f30b21f-3b38-4e7b-8f82-d55173e92593.png)
 
 * GETでlocalhost:8080/namesでNameControllerクラスのgetUsersメソッドより、データベースの全レコードが返されます。
