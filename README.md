@@ -5,6 +5,15 @@ READ・CREATE・UPDATE・DELETE機能を実装しています。
 単体テスト、結合テスト、Github ActionsでのCIも実装しています。
 
 ---
+## 構成要件
+* Java 17
+* Spring Framework 3.0.1
+* MySQL 8.0.32
+* Docker Desktop 4.17.1
+* JUnit 5.9.1
+* Mockito
+* Database Rider
+---
 # 起動手順
 ```  
 docker compose up  
@@ -25,7 +34,7 @@ docker compose down
 
 ---
 
-# URL設計
+# 機能一覧
 | No | 画面名／機能名     | メソッド名 | HTTPリクエストの種類 | URL          | 
 |-------------|-------------| ------------ |-----------------|-----------------| 
 | 1 | レコード一覧取得     | findAll() |GET|http://localhost:8080/users      |
@@ -103,4 +112,4 @@ docker compose down
 
 ・IntelliJ IDEA Community Edition 2022.1.2
 
-・SDK:Amazon Corretto 17
+・
